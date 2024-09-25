@@ -1,92 +1,142 @@
-
 {% load static %}
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Dennis Ivanov</title>
+	<title>Abiel Eyasu - Full Stack Developer</title>
 	<link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .showcase {
+            min-height: 400px;
+            background: url('background.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .main-content {
+            padding: 20px;
+            background: #fff;
+        }
+        .main-content h2 {
+            text-align: center;
+        }
+        .main-content p {
+            line-height: 1.6;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-	<br>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3">
-				<div class="card card-body h-100  border-info" id="profile-wrapper">
-					<img id="profile-pic" src="{% static 'images/dennisivanov.jpg' %}" >
-					<hr>
-					<h4>Hi I'm Dennis!</h4>
-					<p>I love coding, doing research and collaborating</p>
-				</div>
-			</div>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Abiel Eyasu</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-			<div class="col-md-9">
-				<div class="card card-body h-100  border-info">
-					<h4>My First Job as a Developer</h4>
-					<hr>
-					<p>3 months after writing my first Hello World program on September 8th 2017 (While working in the marketing department) I had convinced my boss to let me take a stab at building a better version of the outdated laboratory management system my company was running on.</p>
+    <section class="showcase">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Full Stack Developer with a passion for C, JavaScript, and Python</p>
+        </div>
+    </section>
 
-					<p>Before I knew it we transitioned from the old system and we're on to mine. My newbie self was now in charge of hosting hundreds of thousands of lab samples and supporting thousands of clients.</p>
+    <section class="main-content" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I'm Abiel Eyasu, a full stack developer with a passion for C, JavaScript, and Python. I love creating web applications and solving complex problems with code.</p>
+        </div>
+    </section>
 
-					<p>From this you’ll see that I’m someone that jumps before I can talk myself out of doing something scary.</p>
+    <section class="main-content" id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <p>Here are some of the technologies I work with:</p>
+            <ul>
+                <li>C</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>HTML & CSS</li>
+                <li>Django</li>
+                <li>React</li>
+            </ul>
+        </div>
+    </section>
 
-					<ul class="social-links">
-						<li><img class="social" src="{% static 'images/facebook.png' %}"></li>
-						<li><img class="social" src="{% static 'images/linkedin.png' %}"></li>
-						<li><img class="social" src="{% static 'images/twitter.png' %}"></li>
-						<li><img class="social" src="{% static 'images/youtube.png' %}"></li>
-					</ul>
+    <section class="main-content" id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>You can reach me at <a href="mailto:abiel@example.com">abiel@example.com</a></p>
+        </div>
+    </section>
 
-				</div>
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="card card-body h-100">
-					<h5>My Experience as a Developer</h5>
-					<hr>
-					<p>Full stack developer at FOI laboratories.</p>
-					<p>Designed, built and managed a lab management system as a sole developer. System supported thousands of customers with a UI for Lab Admins and a customer dashboard.</p>
-					</div>
-			</div>
-
-			<div class="col-md-6">
-				<div class="card card-body h-100">
-					<h5>What I Know</h5>
-					<hr>
-					<p>Python, Django, HTML/CSS, JavaScript/Jquery, React, Postgres, AWS and APIs such as google maps, JavaScript charts and a whole bunch more I can’t possibly mention in one sentence! ;)</p>
-					<p>PS: Working on Node JS, Mongo DB and Machine Learning.</p>
-				</div>
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="card card-body h-100">
-					<h5>How I Learn</h5>
-					<hr>
-					<p>Reverse Engineer & Build Ugly Prototypes First.</p>
-
-					<p>I can learn just about anything by having a final product to tear apart piece by piece. I break the code where I need to figure out why things work the way they do. Documentation is just a reference.</p>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<div class="card card-body h-100">
-					<h5>My Short Term Goals</h5>
-				<hr>
-				<p>After almost two years of supporting my system at the lab I’m ready to learn something new. I'll collaborating and sharing my experience with others on my blog (SayHelloWorld.co) & youtube channel.</p>
-				<p>Aside from building small projects I would love to enter a position where I can be part of a bigger team & learn from others with more experience than myself.</p>
-
-				</div>
-			</div>
-		</div>
-		<br>
-	</div>
-
-
+    <footer>
+        <p>Abiel Eyasu © 2024</p>
+    </footer>
 </body>
 </html>
